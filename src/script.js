@@ -23,22 +23,34 @@ addEventListener('submit', (event) => {
   event.preventDefault();
   resetMessage();
 
-  let email = document.getElementById('email').value;
+  let email = document.getElementById('email').value.trim();
+  let successMessage = document.querySelector('success-message');
+  let takenErrorMessage = document.querySelector('taken-error-message');
+  let emptyErrormessage = document.querySelector('empty-error-message');
 
+  let usersTable = [{ username: 'existing@example.com' }];
   let isEmailTaken = usersTable.some((user) => user.username === email);
 
   let lastEmail;
 
   let isEmailRepeated = email === lastEmail;
 
-  if (isEmailTaken) {
-    return 'taken-error-message';
+  if (!email) {
+    emptyErrormessage.hidden = false;
+  } else if (isEmailTaken) {
+    takenErrorMessage.hidden = false;
   } else if (isEmailRepeated) {
-    return 'Repeated';
-  } else if (email === '') {
-    return 'empty-error-message';
+    takenErrorMessage.textContent = 'Error.Email Already Submitted';
+    takenErrorMessage.hidden = false;
   } else {
-    return 'success-message';
+    successMessage.hiden = false;
+    lastEmail = email;
+  }
+
+  function resetMessage() {
+    document.getElementById('success-message').hidden = true;
+    document.getElementById('taken-error-message').hidden = true;
+    document.getElementById('empty-error-message').hidden = true;
   }
 
   // TODO: Show Correct Status Messages on Signup Form
