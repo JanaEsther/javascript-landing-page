@@ -7,8 +7,8 @@
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
 html {
   font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -812,7 +812,7 @@ form>span {
 #jumbo-image {
   max-height: 20rem;
   filter: invert(100%)
-    /* TODO: Invert banner colors using CSS */
+    /* TODO: Invert banner colors using CSS - FIXED*/
 }
 
 @media (max-width: 600px) {
@@ -1063,7 +1063,7 @@ form>span {
 
 #challenge-grid {
   display: grid;
-  /* TODO: Fix Issue, Tiles Need to be 2x2 Grid. Change only grid-template-columns */
+  /* TODO: Fix Issue, Tiles Need to be 2x2 Grid. Change only grid-template-columns- FIXED */
   grid-template-columns: repeat(2, 2fr);
   grid-auto-rows: 10rem;
   gap: 1rem;

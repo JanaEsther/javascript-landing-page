@@ -34,11 +34,11 @@ addEventListener('submit', (event) => {
   if (isEmailTaken) {
     return 'taken-error-message';
   } else if (isEmailRepeated) {
-    return 'Repeated ';
+    return 'Repeated';
   } else if (email === '') {
     return 'empty-error-message';
   } else {
-    return 'success message';
+    return 'success-message';
   }
 
   // TODO: Show Correct Status Messages on Signup Form
