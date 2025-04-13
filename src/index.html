@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>JobSimulator.Dev</title>
@@ -17,7 +17,7 @@
 
   <body>
     <!-- Navbar -->
-    <!-- TODO: Fix Issue, Nav Buttons Don't Work (Desktop & Mobile) -->
+    <!-- TODO: #78 Fix Issue, Nav Buttons Don't Work (Desktop & Mobile) - FIXED -->
     <nav class="top">
       <div class="bar blue card left-align large">
         <a
@@ -29,31 +29,30 @@
           ><i class="fa fa-bars"></i
         ></a>
         <!-- TODO: Fix Issue, Desktop Nav Is Visible on Mobile -->
+        <!-- Desktop Navigation -->
+
         <a
-          href=""
+          href="#header"
           id="nav-logo"
-          class="bar-item hide-small button padding-large white"
+          class="bar-item button padding-large white"
           >JobSimulator.Dev</a
         >
         <a
           href="#challenges"
           id="nav-challenges"
-          class="bar-item hide-small button padding-large hover-white"
+          class="bar-item button padding-large hover-white hide-small"
           >Browse Challenges</a
         >
         <a
           href="#signup"
           id="nav-signup"
-          class="bar-item hide-small button padding-large hover-white"
+          class="bar-item button padding-large hover-white hide-small"
           >Sign Up</a
         >
       </div>
 
       <!-- Navbar on small screens -->
-      <div
-        id="mobile-nav"
-        class="bar-block white hide hide-large hide-medium large"
-      >
+      <div id="mobile-nav" class="bar-block white hide hide-large large">
         <a id="mobile-nav-challenges" class="bar-item button padding-large"
           >Browse Challenges</a
         >
@@ -69,7 +68,7 @@
       class="container white center"
       style="padding: 128px 16px"
     >
-      <img id="jumbo-image" src="./banner-image.png" />
+      <img id="jumbo-image" src="./banner-image.png" alt="jumbo-image" />
       <h1 class="margin jumbo">Want to test your software dev skills?</h1>
       <a href="#signup" class="button blue padding-large large margin-top"
         >Sign Up</a

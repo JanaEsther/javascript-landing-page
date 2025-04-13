@@ -7,6 +7,7 @@
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
 html {
   font-size: 100%;
+  -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -810,7 +811,8 @@ form>span {
 
 #jumbo-image {
   max-height: 20rem;
-  /* TODO: Invert banner colors using CSS */
+  filter: invert(100%)
+    /* TODO: Invert banner colors using CSS */
 }
 
 @media (max-width: 600px) {
